@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "E:/Web Dev software/Restaurant Website/Gruntfile.js",
+        "E:/Web Dev software/Restaurant Website/gulpfile.js",
+        "E:/Web Dev software/Restaurant Website/bower_components/jquery/src/traversing.js",
+        "E:/Web Dev software/Restaurant Website/test/protractor.conf.js"
+    ]
+}

@@ -1,0 +1,127 @@
+    <div class="container" id="contactInformation" ng-controller="ContactController">
+        <div class="row row-header">
+            <div>
+                <ol class="breadcrumb">
+                  <li><a href="index.html">Home</a></li>
+                  <li>Contact Us</li>
+                </ol>
+            </div>
+            <div>
+               <h3>Contact Us</h3>
+               <hr>
+                <br><br>
+               <h4><strong>Location Information</strong></h4>
+                <br>
+            </div>
+        </div>
+        <div  class="container">
+            <div class="row">   
+                <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+                    <h5><strong>Our Address</strong></h5>
+                    <br>
+                    <address>
+		              121, Clear Water Bay Road<br>
+		              Clear Water Bay, Kowloon<br>
+		              HONG KONG<br>
+		              <i class="fa fa-phone"></i>: +852 1234 5678<br>
+		              <i class="fa fa-fax"></i>: +852 8765 4321<br>
+		              <i class="fa fa-envelope"></i>: <a href="mailto:https://www.confusion@food.net">confusion@food.net</a>
+                        <br><br>
+		           </address>
+                    <div class="btn-group" role="group" aria-label="...">
+                        <a type="button" class="btn btn-primary" href="tel:+919873634151"><i class="fa fa-phone">Call</i></a>
+                        <a type="button" class="btn btn-info"><i class="fa fa-skype">Skype</i></a>
+                        <a type="button" class="btn btn-success" href="https://www.ishankagarwal62@gmail.com"><i class="fa fa-envelope-o">Email</i></a>
+                    </div>
+                 </div>
+                 <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+                            <h4>Map of our Location</h4>
+                 </div>
+            </div>
+            <br><br><br><br><br><br>
+        </div>
+        <div class="container">
+            <div class="row row-content">
+                <div class="col-xs-12">
+                    <h4>Send Us Your Feedback</h4>
+                    <br><br>
+                </div>
+                <div class="col-xs-12 col-sm-9" ng-controller="FeedbackController">
+                    <form class="form-horizontal" role="form" name="feedbackForm" ng-submit="sendFeedback()" novalidate>
+                        <div class="form-group" ng-class="{ 'has-error' : feedbackForm.firstname.$error.required && !feedbackForm.firstname.$pristine }">
+                            <label for="firstname" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name" ng-model="feedback.firstName" required>
+                            <span ng-show="feedbackForm.firstName.$error.required && !feedbackForm.firstName.$pristine" class="help-block">Your First Name is required !</span>
+                        </div>  
+                        </div>
+                        <div class="form-group" ng-class="{ 'has-error' : feedbackForm.firstname.$error.required && !feedbackForm.firstname.$pristine }">
+                            <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name" ng-model="feedback.lastName" required>
+                            <span ng-show="feedbackForm.lastname.$error.required && !feedbackForm.lastname.$pristine" class="help-block">Your Last Name is required !</span>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telnum" class="col-sm-2 control-label">Contact Tel.</label>
+                            <div class="col-xs-5 col-sm-4 col-md-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon">(</div>
+                                    <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area Code" ng-model="feedback.tel.areaCode">
+                                    <div class="input-group-addon">)</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-sm-3 col-md-3">
+                                <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. Number" ng-model="feedback.tel.number">
+                            </div>
+                        </div>
+                        <div class="form-group"  ng-class="{ 'has-error has-feedback' : feedbackForm.emailid.$invalid && !feedbackForm.emailid.$pristine }">
+                            <label for="emailid" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-6">
+                                <input type="emailid" class="form-control" id="emailid" name="emailid" placeholder="example@google.com"  ng-model="feedback.email" required>
+                                <span ng-show="feedbackForm.emailid.$invalid && !feedbackForm.emailid.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                <span ng-show="(feedbackForm.emailid.$invalid || feedbackForm.emailid.$error.required) && !feedbackForm.emailid.$pristine" class="help-block">Enter a valid email address !</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group"  ng-class="{ 'has-error' : invalidChannelSelection }">
+                            <div class="checkbox col-sm-3 col-sm-offset-2">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="approve" value="" ng-model="feedback.agree">
+                                    <strong>May we Contact You?</strong>
+                                </label>
+                            </div>
+                            <div class="col-sm-2 col-sm-offset-1" ng-show="feedback.agree">
+                                <select class="form-control"
+                                    ng-model="feedback.mychannel"
+                                    ng-options="channel.value as channel.label for channel in channels">
+                                <option value="">Tel. or Email?</option>
+                                </select>
+                                <span ng-show="invalidChannelSelection" class="help-block">Select an option !</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedback" class="col-sm-2 conntrol-label">Your Feedback</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="feedback" name="feedback" rows="12" ng-model="feedback.comments"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-6">
+                                <button type="submit" class="btn btn-primary" ng-disabled="feedbackForm.$invalid">Send Feedback</button>
+                            </div>
+                        </div>
+                        <br><br><br>
+                    </form>
+                </div>
+                 <div class="col-xs-12 col-sm-3">
+                      <h3>Your Current Feedback:</h3>
+                      <p>{{feedback.firstName}} {{feedback.lastName | uppercase }}</p>
+                      <p>Contact Tel.: ({{feedback.tel.areaCode}}) {{feedback.tel.number}}</p>
+                      <p>Contact Email: {{feedback.email}}</p>
+                      <p ng-show="feedback.agree">Contact by: {{feedback.mychannel}}</p>
+                      <p>Comments: {{feedback.comments}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
