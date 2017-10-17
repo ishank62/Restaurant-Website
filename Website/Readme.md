@@ -47,11 +47,15 @@ Ex: http://www. confusion.food/index.html#/menu/0
 Note:Any change  following the hash in the url doesn’t lead to  page reload . If anything to the right of the hash changes, browser doesn’t cause any page reload.(SPAs property).
 
 #### Location Service:
+
 1) Exposes the current URL in the browser address bar.
+
 2)Synchronises the URL with the browser when the user:
-	(i) Changes the address bar.
-	(ii)Clicks on the back/Forward buttons
-	(iii)Clicks on a link
+
+(i) Changes the address bar.
+(ii)Clicks on the back/Forward buttons
+(iii)Clicks on a link
+	
 3) Allows you to manipulate the hash portion of a URL.
 
 
@@ -70,22 +74,42 @@ Note:Any change  following the hash in the url doesn’t lead to  page reload . 
 
 ![Screenshot 1](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%201.png)
 
+
+
 ![Screenshot 2](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%202.png)
+
+
 
 ![Screenshot 3](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%203.png)
 
+
+
 ![Screenshot 4](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%204.png)
+
+
 
 ![Screenshot 5](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%205.png)
 
+
+
 ![Screenshot 6](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%206.png)
+
+
 
 ![Screenshot 7](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%207.png)
 
+
+
 ![Screenshot 8](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%208.png)
+
+
 
 ![Screenshot 9](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%209.png)
 
+
+
 ![Screenshot 10](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%2010.png)
+
+
 
 ![Screenshot 11](https://github.com/ishank62/Restaurant-Website/blob/master/Website/screenshots/Screenshot%2011.png)
